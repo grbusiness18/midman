@@ -1,0 +1,52 @@
+{
+  "name": "midman",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^5",
+    "@sap/cds-dk": "^4.8.2",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "sqlite3": "^4.2.0"
+  },
+  "scripts": {    
+    "start": "cds run",
+    "watch": "cds watch"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "env": {
+      "es2020": true,
+      "node": true,
+      "jest": true,
+      "mocha": true
+    },
+    "globals": {
+      "SELECT": true,
+      "INSERT": true,
+      "UPDATE": true,
+      "DELETE": true,
+      "CREATE": true,
+      "DROP": true,
+      "CDL": true,
+      "CQL": true,
+      "CXL": true,
+      "cds": true
+    },
+    "cds": {
+      "requires": {
+        "db": {
+          "kind": "hana"
+        }
+      }
+    },
+    "rules": {
+      "no-console": "off",
+      "require-atomic-updates": "off"
+    }
+  }
+}
